@@ -6,9 +6,11 @@ Those Ops or sometimes Devs who'd like to get familiar with a full-fledged Ranch
 
 ## Prerequisites
 
-Multipass running on your lcal machine:
+You need Multipass running on your local machine, to learn more about Multipass, please visit:
 
 https://github.com/CanonicalLtd/multipass
+
+https://multipass.run/
 
 This setup was tested on MacOS, but should work on Linux or Windows too.
 
