@@ -1,12 +1,13 @@
-# Rancher Kubernetes Engine and Rancher Server on Multipass VMs
+# Rancher Kubernetes Engine and Rancher Server on Multipass VMs on your local machine
 
 ## Who should use this?
 
-Those who'd like to get familiar with Rancher Kubernetes Engine and Rancher Server on their local machine using Multipass VMs.
+Those Ops or sometimes Devs who'd like to get familiar with a full-fledged Rancher Kubernetes Engine and Rancher Server on their local machine using Multipass VMs to reduce your cloud costs.
 
 ## Prerequisites
 
-Multipass
+Multipass running on your lcal machine:
+
 https://github.com/CanonicalLtd/multipass
 
 This setup was tested on MacOS, but should work on Linux or Windows too.
