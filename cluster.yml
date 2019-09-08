@@ -1,0 +1,23 @@
+ignore_docker_version: true
+ssh_key_path: ~/.ssh/id_rsa
+network:
+  #plugin: canal
+  plugin: flannel
+system_images:
+        # kubernetes: rancher/hyperkube:v1.13.5-rancher1
+        kubernetes: rancher/hyperkube:v1.14.6-rancher1
+nodes:
+  - address: rke1
+    user: rke 
+    role: [controlplane,worker,etcd]
+  - address: rke2
+    user: rke
+    role: [controlplane,worker,etcd]
+  - address: rke3
+    user: rke
+    role: [controlplane,worker,etcd]
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
