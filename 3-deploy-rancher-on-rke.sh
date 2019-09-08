@@ -12,8 +12,8 @@ sleep 60
 kubectl -n kube-system rollout status deploy/cert-manager
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 helm install --name rancher rancher-latest/rancher --namespace cattle-system --set hostname=rke1 --set ingress.tls.source=letsEncrypt --set letsEncrypt.email=devops@kubernauts.de
+echo "############################################################################"
+echo "This should take about 4 minutes, wait for the browser to pop up and enjoy :-)"
+echo "############################################################################"
 sleep 240
-echo "############################################################################"
-echo "This should take about 4 minutes"
-echo "############################################################################"
 open https:/rke1
