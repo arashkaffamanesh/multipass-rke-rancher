@@ -1,4 +1,4 @@
-# Rancher Kubernetes Engine and Rancher Server on Multipass VMs (on Mac or Linux)
+# Rancher Kubernetes Engine and Rancher Server on Multipass VMs
 
 ## Who should use this?
 
@@ -11,27 +11,43 @@ https://github.com/CanonicalLtd/multipass
 
 This setup was tested on MacOS, but should work on Linux or Windows too.
 
+You need to have about 6GB RAM and 24GB storage on your local machine.
+
 ## Installation
+
+### Install multipass (on MacOS or Linux)
+
+```bash
+brew cask install multipass
+sudo snap install multipass --beta --classic
+```
 
 Clone this repo and run the scripts as follow:
 
 ```bash
-git clone https://github.com/arashkaffamanesh/lxc-rke-rancher.git
-cd lxc-rke-rancher/
-./1-deploy-lxc-containers.sh
+git clone https://github.com/arashkaffamanesh/multipass-rke-rancher.git
+cd multipass-rke-rancher
+./1-deploy-multipass-vms.sh
 ./2-deploy-rke.sh
 # if you're a cert-manager lover, please provide the right domain name and email address in 3-deploy-rancher-on-rke.sh
 ./3-deploy-rancher-on-rke.sh
-# open port 443 in your security group and map your domain in dns
 ```
 
 ## What you get
 
-You should get a running RKE Cluster on 3 LXCs with Rancher Server on top in less than 20 minutes.
+You should get a running RKE Cluster on 3 Multipass VMs with Rancher Server on top in about 30 minutes.
 
 ## Access the Rancher Server on RKE
 
-https://your domain name
+https://rke1
+
+## Clean Up
+
+```bash
+multipass stop rke1 rke2 rke3
+multipass delete rke1 rke2 rke3
+multipass purge
+```
 
 ## Blog post
 
