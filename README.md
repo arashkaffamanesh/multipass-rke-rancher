@@ -25,6 +25,8 @@ brew cask install multipass
 sudo snap install multipass --beta --classic
 ```
 
+Note: Please provide your pub key in the cloud-config.yaml as the value for ssh_authorized_keys.
+
 Clone this repo and run the scripts as follow:
 
 ```bash
@@ -32,7 +34,6 @@ git clone https://github.com/arashkaffamanesh/multipass-rke-rancher.git
 cd multipass-rke-rancher
 ./1-deploy-multipass-vms.sh
 ./2-deploy-rke.sh
-# if you're a cert-manager lover, please provide the right domain name and email address in 3-deploy-rancher-on-rke.sh
 ./3-deploy-rancher-on-rke.sh
 ```
 
