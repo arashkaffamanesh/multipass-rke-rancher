@@ -36,6 +36,10 @@ multipass exec ${NODE} -- bash -c 'sudo chown multipass:multipass /etc/hosts'
 multipass exec ${NODE} -- bash -c 'sudo cat /home/multipass/hosts >> /etc/hosts'
 done
 
+echo "We need to write the host entries on your local machine to /etc/hosts"
+echo "Please provide your sudo password:"
+cat hosts | sudo tee -a /etc/hosts
+
 echo "############################################################################"
 echo "Make sure your /etc/hosts file on your localhost and the multipass hosts"
 echo "have these host entries like:"
