@@ -89,6 +89,20 @@ or with a single command:
 
 You should get a running RKE Cluster on 3 Multipass VMs with Rancher Server on top in about 12 minutes (depends on your CPU / internet speed and docker hub performance).
 
+You should get something like this at the End:
+
+```bash
+############################################################################
+This should take about 4 minutes, wait for the browser to pop up and enjoy :-)
+############################################################################
+Waiting for deployment "rancher" rollout to finish: 0 of 3 updated replicas are available...
+Waiting for deployment "rancher" rollout to finish: 1 of 3 updated replicas are available...
+Waiting for deployment "rancher" rollout to finish: 2 of 3 updated replicas are available...
+deployment "rancher" successfully rolled out
+Total runtime in minutes: 11:58
+############################################################################
+```
+
 ## Access the Rancher Server on RKE
 
 A tab will open in your browser and point to:
