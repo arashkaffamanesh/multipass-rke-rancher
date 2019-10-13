@@ -5,7 +5,8 @@ network:
   plugin: flannel
 system_images:
         # kubernetes: rancher/hyperkube:v1.13.5-rancher1
-        kubernetes: rancher/hyperkube:v1.14.6-rancher1
+        # kubernetes: rancher/hyperkube:v1.14.6-rancher1
+          kubernetes: rancher/hyperkube:v1.15.4-rancher1
 nodes:
   - address: rke1
     user: rke 

@@ -15,8 +15,8 @@ echo "##########################################################################
 
 # Install Docker
 for NODE in ${NODES}; do
-    multipass exec ${NODE} -- bash -c 'curl https://releases.rancher.com/install-docker/18.09.sh | sh'
-	# multipass exec ${NODE} -- bash -c 'curl https://releases.rancher.com/install-docker/19.03.sh | sh'
+    # multipass exec ${NODE} -- bash -c 'curl https://releases.rancher.com/install-docker/18.09.sh | sh'
+	multipass exec ${NODE} -- bash -c 'curl https://releases.rancher.com/install-docker/19.03.sh | sh'
 	multipass exec ${NODE} -- sudo usermod -aG docker rke
 	multipass exec ${NODE} -- sudo docker --version
 done
