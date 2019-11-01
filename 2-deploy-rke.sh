@@ -2,12 +2,13 @@
 
 # rm -fv kube_config_cluster.yml
 
-echo "downloading rke v0.2.8"
+echo "downloading rke v0.3.2"
 # wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64
 # sudo chmod +x rke_linux-amd64
 #./rke_linux-amd64 up --config cluster.yml
 # wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_darwin-amd64
-wget https://github.com/rancher/rke/releases/download/v0.3.0/rke_darwin-amd64
+# wget https://github.com/rancher/rke/releases/download/v0.3.0/rke_darwin-amd64
+wget https://github.com/rancher/rke/releases/download/v0.3.2/rke_darwin-amd64
 chmod +x rke_darwin-amd64
 ./rke_darwin-amd64 up --config cluster.yml
 sleep 30
@@ -19,7 +20,7 @@ sleep 30
 echo "############################################################################"
 KUBECONFIG=kube_config_cluster.yml
 kubectl -n kube-system rollout status daemonset.apps/kube-flannel
-kubectl -n cattle-system rollout status daemonset.apps/cattle-node-agent
+# kubectl -n cattle-system rollout status daemonset.apps/cattle-node-agent
 kubectl get nodes
 echo "are the nodes ready?"
 echo "if you face problems, please open an issue on github"
