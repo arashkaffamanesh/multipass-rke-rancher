@@ -14,7 +14,7 @@ helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 kubectl create ns cattle-system
 kubectl -n cattle-system create secret generic tls-ca --from-file=./ca/rancher/cacerts.pem
 kubectl -n cattle-system create secret tls tls-rancher-ingress --cert=./ca/rancher/cert.pem --key=./ca/rancher/key.pem
-helm install --name rancher rancher-latest/rancher --namespace cattle-system --set hostname=rke1  --set ingress.tls.source=secret --set privateCA=true
+helm install --name rancher rancher-stable/rancher --namespace cattle-system --set hostname=rke1  --set ingress.tls.source=secret --set privateCA=true
 # didn't work anymore with rancher slfsigned cert
 # helm install --name rancher rancher-latest/rancher --namespace cattle-system --set hostname=rke1 --set tls=external
 echo "############################################################################"
