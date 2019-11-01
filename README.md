@@ -37,14 +37,20 @@ mv kubectl /usr/local/bin/
 
 ## Installation
 
-### Install multipass (on MacOS Mojave or Linux)
+### Install multipass (on MacOS Catalina or Linux)
+
+Update 01/11/2019
+
+Multipass v0.9 RC has been updated for MacOS Catalina, please download this release:
+
+https://github.com/CanonicalLtd/multipass/releases
+
 
 ```bash
-brew cask install multipass
-sudo snap install multipass --beta --classic
+wget https://github.com/CanonicalLtd/multipass/releases/download/v0.9.0-rc/multipass-0.9.0-rc.425+g37fa4305.mac-Darwin.pkg
+sudo installer -target / -verbose -pkg multipass-0.9.0-rc.425+g37fa4305.mac-Darwin.pkg
+snap install multipass --channel beta/0.9 --classic
 ```
-
-Note: Please provide your pub key in the cloud-config.yaml as the value for ssh_authorized_keys.
 
 ### Important hint for linux users
 
