@@ -37,7 +37,7 @@ mv kubectl /usr/local/bin/
 
 ## Installation
 
-### Install multipass (on MacOS or Linux)
+### Install multipass (on MacOS Mojave or Linux)
 
 ```bash
 brew cask install multipass
