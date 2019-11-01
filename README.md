@@ -52,6 +52,14 @@ sudo installer -target / -verbose -pkg multipass-0.9.0-rc.425+g37fa4305.mac-Darw
 snap install multipass --channel beta/0.9 --classic
 ```
 
+### Install on MacOS Mojave
+
+Please checkout the mojave branch:
+
+```bash
+git clone https://github.com/arashkaffamanesh/multipass-rke-rancher.git -b mojave-multipass-0.8
+```
+
 ### Important hint for linux users
 
 Linux users should adapt the `create-hosts.sh` and adapt the network interface name. You can find the nic name with:
