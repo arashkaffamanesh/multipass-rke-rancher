@@ -4,6 +4,7 @@
 ./generate-certs.sh
 ## Build the nginx.local image
 docker build -t kubernautslabs/nginx.local .
+
 docker push kubernautslabs/nginx.local:latest
 
 ## Related resources
