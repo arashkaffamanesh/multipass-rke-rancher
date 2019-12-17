@@ -124,6 +124,14 @@ A tab will open in your browser and point to:
 
 https://rke1
 
+## Install Metal-LB
+
+Install Metal-LB to have support for service type LoadBalancer:
+
+```bash
+./install-metal-lb.sh
+```
+
 ## Clean Up
 
 ```bash
@@ -135,5 +143,3 @@ https://rke1
 Blog post will be published on medium:
 
 https://blog.kubernauts.io/
-
-
