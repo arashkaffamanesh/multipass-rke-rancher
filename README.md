@@ -130,6 +130,8 @@ Install Metal-LB to have support for service type LoadBalancer:
 
 ```bash
 ./install-metal-lb.sh
+# Test the metal lb install with the custom built nginx server with self signed certificate and port 443 enabled:
+k create -f nginx-local-ssl.yaml
 ```
 
 ## Clean Up
