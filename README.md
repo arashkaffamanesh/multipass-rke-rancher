@@ -43,6 +43,7 @@ Update 17/12/2019
 
 Multipass v0.10.0 has been updated for MacOS Catalina, please download this release:
 
+
 https://github.com/CanonicalLtd/multipass/releases
 
 

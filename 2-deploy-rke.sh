@@ -8,8 +8,7 @@ echo "downloading rke v0.3.2"
 #./rke_linux-amd64 up --config cluster.yml
 # wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_darwin-amd64
 # wget https://github.com/rancher/rke/releases/download/v0.3.0/rke_darwin-amd64
-#wget https://github.com/rancher/rke/releases/download/v0.3.2/rke_darwin-amd64
-wget https://github.com/rancher/rke/releases/download/v1.0.0/rke_darwin-amd64
+wget https://github.com/rancher/rke/releases/download/v0.3.2/rke_darwin-amd64
 chmod +x rke_darwin-amd64
 ./rke_darwin-amd64 up --config cluster.yml
 sleep 30
