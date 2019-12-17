@@ -10,5 +10,7 @@ docker push kubernautslabs/nginx.local:latest
 ## Related resources
 https://medium.com/rahasak/set-up-ssl-certificates-on-nginx-c51f7dc00272
 
+https://github.com/nginxinc/kubernetes-ingress
+
 
 
