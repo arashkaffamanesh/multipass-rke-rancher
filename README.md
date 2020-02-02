@@ -92,6 +92,8 @@ cd multipass-rke-rancher
 ./1-deploy-multipass-vms.sh
 ./2-deploy-rke.sh
 ./3-deploy-rancher-on-rke.sh
+# or with mkcert to get a vaild certificate (on macos), you need to install mkcert, pls. have a look in the script
+./ 3-deploy-rancher-on-rke-mkcert-macos.sh
 ```
 
 or with a single command:
