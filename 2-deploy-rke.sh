@@ -2,13 +2,14 @@
 
 # rm -fv kube_config_cluster.yml
 
-echo "downloading rke v0.3.2"
+echo "downloading rke v1.0.4"
 # wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_linux-amd64
 # sudo chmod +x rke_linux-amd64
 #./rke_linux-amd64 up --config cluster.yml
 # wget https://github.com/rancher/rke/releases/download/v0.2.8/rke_darwin-amd64
 # wget https://github.com/rancher/rke/releases/download/v0.3.0/rke_darwin-amd64
-wget https://github.com/rancher/rke/releases/download/v0.3.2/rke_darwin-amd64
+# wget https://github.com/rancher/rke/releases/download/v0.3.2/rke_darwin-amd64
+wget https://github.com/rancher/rke/releases/download/v1.0.4/rke_darwin-amd64
 chmod +x rke_darwin-amd64
 ./rke_darwin-amd64 up --config cluster.yml
 sleep 30
@@ -18,7 +19,7 @@ sleep 30
 # chmod +x ./kubectl
 
 echo "############################################################################"
-KUBECONFIG=kube_config_cluster.yml
+export KUBECONFIG=kube_config_cluster.yml
 kubectl -n kube-system rollout status daemonset.apps/kube-flannel
 # kubectl -n cattle-system rollout status daemonset.apps/cattle-node-agent
 kubectl get nodes
@@ -26,10 +27,10 @@ echo "are the nodes ready?"
 echo "if you face problems, please open an issue on github"
 echo "make sure all pods are running before deploying Rancher Server on your RKE"
 echo "run:"
-echo "KUBECONFIG=kube_config_cluster.yml ./kubectl get all -A"
+echo "KUBECONFIG=kube_config_cluster.yml kubectl get all -A"
 echo "This may take about 5 minutes"
 echo "All fine?"
-echo "Now run ./3-deploy-rancher.sh"
+echo "Now run ./3-deploy-rancher-on-rke.sh"
 echo "############################################################################"
 
 # Upgrade to k8s 1.14.6
