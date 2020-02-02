@@ -33,6 +33,8 @@ echo "KUBECONFIG=kube_config_cluster.yml kubectl get all -A"
 echo "This may take about 5 minutes"
 echo "All fine?"
 echo "Now run ./3-deploy-rancher-on-rke.sh"
+echo "or"
+echo "Now run ./3-deploy-rancher-on-rke-mkcert-macos.sh"
 echo "############################################################################"
 
 # Upgrade to k8s 1.14.6
