@@ -12,6 +12,8 @@ echo "downloading rke v1.0.4"
 wget https://github.com/rancher/rke/releases/download/v1.0.4/rke_darwin-amd64
 chmod +x rke_darwin-amd64
 ./rke_darwin-amd64 up --config cluster.yml
+# if something goes wrong, remore rke
+# ./rke_darwin-amd64 remove --config cluster.yml
 sleep 30
 # echo "downloading kubectl"
 # curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl
