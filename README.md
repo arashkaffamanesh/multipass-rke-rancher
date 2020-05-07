@@ -8,7 +8,7 @@ Those Ops or sometimes Devs who'd like to get familiar with a full-fledged Ranch
 
 ## Prerequisites
 
-You need Multipass running on your local machine, to learn more about Multipass, please visit:
+You need Multipass running on your local machine with mkcert installed, to learn more about Multipass, please visit:
 
 https://github.com/CanonicalLtd/multipass
 
