@@ -1,5 +1,7 @@
 # Rancher Kubernetes Engine and Rancher Server on Multipass VMs on your local machine
 
+![rke-rancher-nginx.png](rke-rancher-nginx.png)
+
 ## Who should use this?
 
 Those Ops or sometimes Devs who'd like to get familiar with a full-fledged Rancher Kubernetes Engine and Rancher Server on their local machine using Multipass VMs to reduce their cloud costs. This implementation is not an alternative to k3d, k3s, k3sup, etc..
