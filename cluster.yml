@@ -1,14 +1,14 @@
 ignore_docker_version: true
 ssh_key_path: ~/.ssh/id_rsa
 network:
-  #plugin: canal
-  plugin: flannel
+  plugin: calico
+  # plugin: flannel
 system_images:
         # kubernetes: rancher/hyperkube:v1.13.5-rancher1
         # kubernetes: rancher/hyperkube:v1.14.6-rancher1
         # kubernetes: rancher/hyperkube:v1.15.5-rancher1
         # kubernetes: rancher/hyperkube:v1.16.2-rancher1
-        kubernetes: rancher/hyperkube:v1.17.2-rancher1
+        kubernetes: rancher/hyperkube:v1.17.5-rancher1
 nodes:
   - address: rke1
     user: ubuntu 

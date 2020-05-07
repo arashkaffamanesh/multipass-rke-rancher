@@ -3,6 +3,7 @@ res1=$(date +%s)
 ./1-deploy-multipass-vms.sh
 ./2-deploy-rke.sh
 #./3-deploy-rancher-on-rke.sh
+./3-deploy-rancher-on-rke-mkcert-macos.sh
 res2=$(date +%s)
 dt=$(echo "$res2 - $res1" | bc)
 dd=$(echo "$dt/86400" | bc)
