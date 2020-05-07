@@ -14,6 +14,8 @@ https://github.com/CanonicalLtd/multipass
 
 https://multipass.run/
 
+[mkcert](https://github.com/FiloSottile/mkcert)
+
 This setup was tested on MacOS, but should work on Linux or Windows too.
 
 You need to have about 6GB RAM and 24GB storage on your local machine.
@@ -23,13 +25,13 @@ You need kubectl in your path, if not, you can download the v1.15.0 version and 
 MacOS users:
 
 ```bash
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/darwin/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.5/bin/darwin/amd64/kubectl
 ```
 
 Linux users:
 
 ```bash
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubectl
 ```
 
 ```bash
@@ -38,30 +40,6 @@ mv kubectl /usr/local/bin/
 ```
 
 ## Installation
-
-### Install multipass (on MacOS Catalina or Linux)
-
-Update 17/12/2019
-
-Multipass v0.10.0 has been updated for MacOS Catalina, please download this release:
-
-
-https://github.com/CanonicalLtd/multipass/releases
-
-
-```bash
-wget https://github.com/CanonicalLtd/multipass/releases/download/v0.10.0/multipass-0.10.0+mac-Darwin.pkg
-sudo installer -target / -verbose -pkg multipass-0.10.0+mac-Darwin.pkg
-snap install multipass --beta --classic
-```
-
-### Install on MacOS Mojave
-
-Please checkout the mojave branch:
-
-```bash
-git clone https://github.com/arashkaffamanesh/multipass-rke-rancher.git -b mojave-multipass-0.8
-```
 
 ### Important hint for linux users
 
@@ -126,7 +104,7 @@ Total runtime in minutes: 11:58
 
 A tab will open in your browser and point to:
 
-https://rke1
+https://gui.rancher.svc/
 
 ## Install Metal-LB
 
@@ -135,7 +113,7 @@ Install Metal-LB to have support for service type LoadBalancer:
 ```bash
 ./install-metal-lb.sh
 # Test the metal lb install with the custom built nginx server with self signed certificate and port 443 enabled:
-k create -f nginx-local-ssl.yaml
+k create -f nginx-local-ssl/nginx-local-ssl.yaml
 ```
 
 ## Clean Up
