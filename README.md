@@ -20,7 +20,7 @@ This setup was tested on MacOS, but should work on Linux or Windows too.
 
 You need to have about 6GB RAM and 24GB storage on your local machine.
 
-You need kubectl in your path, if not, you can download the v1.15.0 version and put it in your path:
+You need kubectl in your path, if not, you can download the v1.17.5 version and put it in your path:
 
 MacOS users:
 
