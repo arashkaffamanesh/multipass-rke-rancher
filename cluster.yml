@@ -3,18 +3,15 @@ ssh_key_path: ~/.ssh/id_rsa
 network:
   plugin: calico
   # plugin: flannel
+# kubernetes-version: v1.18.3-rancher2-2
 system_images:
-        # kubernetes: rancher/hyperkube:v1.13.5-rancher1
-        # kubernetes: rancher/hyperkube:v1.14.6-rancher1
-        # kubernetes: rancher/hyperkube:v1.15.5-rancher1
-        # kubernetes: rancher/hyperkube:v1.16.2-rancher1
-        kubernetes: rancher/hyperkube:v1.17.5-rancher1
+  kubernetes: rancher/hyperkube:v1.17.6-rancher2
 nodes:
   - address: rke1
     user: ubuntu 
     role: [controlplane,worker,etcd]
     labels:
-      app: dns
+      app: dns  
   - address: rke2
     user: ubuntu
     role: [controlplane,worker,etcd]
@@ -27,6 +24,6 @@ services:
     creation: 6h
     retention: 24h
 dns:
-    provider: coredns
-    node_selector:
-      app: dns
+  provider: coredns
+  node_selector:
+    app: dns
