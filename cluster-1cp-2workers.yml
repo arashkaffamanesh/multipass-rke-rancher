@@ -1,0 +1,25 @@
+nodes:
+- address: rke1
+  role:
+  - controlplane
+  - etcd
+  user: ubuntu
+  ssh_key_path: ~/.ssh/id_rsa
+  hostname_override: rke1
+- address: rke2
+  role:
+  - worker
+  user: ubuntu
+  ssh_key_path: ~/.ssh/id_rsa
+  hostname_override: rke2
+- address: rke3
+  role:
+  - worker
+  user: ubuntu
+  ssh_key_path: ~/.ssh/id_rsa
+  hostname_override: rke3
+
+cluster_name: mgmt
+
+authorization:
+  mode: rbac

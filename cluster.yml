@@ -1,20 +1,23 @@
+
 ignore_docker_version: true
 ssh_key_path: ~/.ssh/id_rsa
 network:
   plugin: calico
   # plugin: flannel
+  # plugin: canal
 system_images:
         # kubernetes: rancher/hyperkube:v1.13.5-rancher1
         # kubernetes: rancher/hyperkube:v1.14.6-rancher1
         # kubernetes: rancher/hyperkube:v1.15.5-rancher1
         # kubernetes: rancher/hyperkube:v1.16.2-rancher1
-        kubernetes: rancher/hyperkube:v1.17.5-rancher1
+        # kubernetes: rancher/hyperkube:v1.17.5-rancher1
+        kubernetes: rancher/hyperkube:v1.20.9-rancher1
 nodes:
   - address: rke1
     user: ubuntu 
     role: [controlplane,worker,etcd]
-    labels:
-      app: dns
+    # labels:
+    #   app: dns
   - address: rke2
     user: ubuntu
     role: [controlplane,worker,etcd]
@@ -26,7 +29,12 @@ services:
     snapshot: true
     creation: 6h
     retention: 24h
-dns:
-    provider: coredns
-    node_selector:
-      app: dns
+# dns:
+#     provider: coredns
+#     node_selector:
+#       app: dns
+
+cluster_name: rke-mgmt-local
+
+authorization:
+  mode: rbac
