@@ -1,5 +1,4 @@
-# Rancher Kubernetes Engine and Rancher Server on Multipass VMs on your local machine
-
+# Rancher Kubernetes Engine and Rancher Cluster Manager on Multipass VMs with rootless Docker
 ![rke-rancher-nginx.png](rke-rancher-nginx.png)
 
 ## Who should use this?
