@@ -12,7 +12,8 @@ echo "downloading rke v1.2.11"
 # wget https://github.com/rancher/rke/releases/download/v1.0.8/rke_darwin-amd64
 # wget https://github.com/rancher/rke/releases/download/v1.1.7/rke_darwin-amd64
 # wget https://github.com/rancher/rke/releases/download/v1.1.19/rke_darwin-amd64
-wget https://github.com/rancher/rke/releases/download/v1.2.11/rke_darwin-amd64
+# wget https://github.com/rancher/rke/releases/download/v1.2.11/rke_darwin-amd64
+wget https://github.com/rancher/rke/releases/download/v1.3.2/rke_darwin-amd64
 chmod +x ./rke_darwin-amd64
 ./rke_darwin-amd64 up --config cluster.yml
 # if something goes wrong, remore rke
