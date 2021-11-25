@@ -1,4 +1,4 @@
-# Rancher Kubernetes Engine and Rancher Cluster Manager on Multipass VMs with rootless Docker
+# Rancher Kubernetes Engine and Rancher Cluster Manager (2.6.2 Stable) on Multipass VMs with rootless Docker
 ![rke-rancher-nginx.png](rke-rancher-nginx.png)
 
 ## Who should use this?
@@ -23,7 +23,7 @@ This setup was tested on MacOS, but should work on Linux or maybe on Windows wit
 
 This setup uses and was tested with the following tools and components:
 
-* rke cli version v1.2.11
+* rke cli version v1.3.2
 * kubectl version 1.20.9
 * docker community version 20.10.7
 * containerd version 1.4.9
